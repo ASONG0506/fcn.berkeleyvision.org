@@ -5,7 +5,8 @@
 **2.论文中详细讲解了设计fcn的一些思路和对比，也包括对于一些深度学习的tips的使用，[论文的阅读笔记](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/FCN%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0.pdf)已经上传到repo中**
 
 **3.代码中学习到的一些新东西：网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
-****
+**  使用Python脚本进行caffe模型文件的生成的魔板**
+**  **
 
 
 ## *下面是原始的repo内容*
