@@ -5,6 +5,10 @@
 **论文中详细讲解了设计fcn的一些思路和对比，也包括对于一些技巧的使用，论文的阅读笔记已经上传到repo中**
 
 **一些新东西：网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
+****
+
+
+## *下面是原始的repo内容*
 
 This is the reference implementation of the models and code for the fully convolutional networks (FCNs) in the [PAMI FCN](https://arxiv.org/abs/1605.06211) and [CVPR FCN](http://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Long_Fully_Convolutional_Networks_2015_CVPR_paper.html) papers:
 
