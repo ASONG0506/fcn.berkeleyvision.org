@@ -1,10 +1,10 @@
 # 分割网络之：Fully Convolutional Networks for Semantic Segmentation 当前流行深度学习分割模型的基石
 
-**主要的脚本文件就是外边的这几个Python文件，另外的文件夹是data和一些模型文件，包括基础网络ilsvrc-nets上训练的vgg，另外就是在各个数据集上跑的不同的模型的结果，都有准确率结果.**
+**1.主要的脚本文件就是外边的这几个Python文件，另外的文件夹是data和一些模型文件，包括基础网络ilsvrc-nets上训练的vgg，另外就是在各个数据集上跑的不同的模型的结果，都有准确率结果.**
 
-**论文中详细讲解了设计fcn的一些思路和对比，也包括对于一些技巧的使用，[论文的阅读笔记](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/FCN%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0.pdf)已经上传到repo中**
+**2.论文中详细讲解了设计fcn的一些思路和对比，也包括对于一些技巧的使用，[论文的阅读笔记](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/FCN%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0.pdf)已经上传到repo中**
 
-**一些新东西：网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
+**3.代码中学习到的一些新东西：网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
 ****
 
 
