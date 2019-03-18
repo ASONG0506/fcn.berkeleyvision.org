@@ -1,3 +1,5 @@
+##cjs 使用脚本进行网络的prototxt的生成
+
 import caffe
 from caffe import layers as L, params as P
 from caffe.coord_map import crop
