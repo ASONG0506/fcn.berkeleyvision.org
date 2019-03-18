@@ -1,4 +1,11 @@
-##cjs 使用脚本进行网络的prototxt的生成
+#-*- coding:utf-8 -*-
+
+
+# 使用脚本进行网络的prototxt的生成
+# 首先定义一个caffe.NetSpec();然后不断向其中添加layers，其中一些模块可以单独使用函数进行封装，然后使用net.layer进行添加；最后使用net.to_proto()函数进行模型文件的序列化
+# 网络结构就是2 2 3 3 3 ，然后conv ，deconv，融合，再deconv，融合等进行三次。
+# 这里的crop是根据输出的尺度，将skip层过来的参数进行crop，因为之前的为了尺度合适进行过padding，所以为了适应后面的尺度，对应地进行裁剪以后相加实现信息融合。
+#
 
 import caffe
 from caffe import layers as L, params as P
@@ -51,6 +58,9 @@ def fcn(split):
     n.fc7, n.relu7 = conv_relu(n.drop6, 4096, ks=1, pad=0)
     n.drop7 = L.Dropout(n.relu7, dropout_ratio=0.5, in_place=True)
 
+    # 这里是实现尺度提升的代码
+    # 使用skip层进行1*1卷积，然后把后面的信息进行deconv，然后把skip过来的数据按照deconv的尺度进行裁剪，得到结果后在进行eltwise的相加运算
+    #
     n.score_fr = L.Convolution(n.drop7, num_output=60, kernel_size=1, pad=0,
         param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)])
     n.upscore2 = L.Deconvolution(n.score_fr,
@@ -67,6 +77,7 @@ def fcn(split):
         convolution_param=dict(num_output=60, kernel_size=4, stride=2,
             bias_term=False),
         param=[dict(lr_mult=0)])
+
 
     n.score_pool3 = L.Convolution(n.pool3, num_output=60, kernel_size=1, pad=0,
         param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)])
