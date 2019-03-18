@@ -1,5 +1,7 @@
 # Fully Convolutional Networks for Semantic Segmentation
 
+**主要的脚本文件就是外边的这几个Python文件，另外的文件夹是data和一些模型文件，包括基础网络ilsvrc-nets上训练的vgg，另外就是在各个数据集上跑的不同的模型的结果，都有准确率结果.**
+
 This is the reference implementation of the models and code for the fully convolutional networks (FCNs) in the [PAMI FCN](https://arxiv.org/abs/1605.06211) and [CVPR FCN](http://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Long_Fully_Convolutional_Networks_2015_CVPR_paper.html) papers:
 
     Fully Convolutional Models for Semantic Segmentation
