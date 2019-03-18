@@ -1,4 +1,4 @@
-# 分割网络之：Fully Convolutional Networks for Semantic Segmentation 当前流行深度学习分割模型的开山鼻祖
+# 分割网络之：Fully Convolutional Networks for Semantic Segmentation 当前流行深度学习分割模型的基石
 
 **主要的脚本文件就是外边的这几个Python文件，另外的文件夹是data和一些模型文件，包括基础网络ilsvrc-nets上训练的vgg，另外就是在各个数据集上跑的不同的模型的结果，都有准确率结果.**
 
