@@ -1,6 +1,5 @@
 #-*- coding:utf-8 -*-
 
-
 # 使用脚本进行网络的prototxt的生成
 # 首先定义一个caffe.NetSpec();然后不断向其中添加layers，其中一些模块可以单独使用函数进行封装，然后使用net.layer进行添加；最后使用net.to_proto()函数进行模型文件的序列化
 # 网络结构就是2 2 3 3 3 ，然后conv ，deconv，融合，再deconv，融合等进行三次。

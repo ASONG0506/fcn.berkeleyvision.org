@@ -6,7 +6,7 @@
 
 **3.代码中学习到的一些新东西：**
 **3.1网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
-**3.2[使用Python脚本进行caffe模型文件的生成的模板](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/pascalcontext-fcn8s/net.py)**
+**3.2[使用Python脚本进行caffe模型文件的生成的模板。](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/pascalcontext-fcn8s/net.py)**
 **3.3**
 
 
