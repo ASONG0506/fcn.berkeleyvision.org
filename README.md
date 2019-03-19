@@ -5,9 +5,10 @@
 **2.论文中详细讲解了设计fcn的一些思路和对比，也包括对于一些深度学习的tips的使用，[论文的阅读笔记](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/FCN%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0.pdf)已经上传到repo中**
 
 **3.代码中学习到的一些新东西：**
-**3.1网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。**
-**3.2[使用Python脚本进行caffe模型文件的生成的模板。](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/pascalcontext-fcn8s/net.py)**
-**3.3**
+* 3.1 网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。
+* 3.2 [使用Python脚本进行caffe模型文件的生成的模板。](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/pascalcontext-fcn8s/net.py) 在生成魔心该文件以后，需要再次将训练模型的训练权重加载到fcn模型中，因此使用surgery.py文件进行修改，包括参数符合层的直接复制与参数不符合的层的前置转换等
+* 3.3 [模型训练文件](https://github.com/ASONG0506/fcn.berkeleyvision.org/blob/master/pascalcontext-fcn8s/solve.py)主要就是先设置一些solver的参数，然后调用surgery进行模型调整，然后进行训练与验证
+* 3.4 
 
 
 ## *下面是原始的repo内容*
