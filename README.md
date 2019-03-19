@@ -6,7 +6,7 @@
 
 **3.代码中学习到的一些新东西：**
 * 3.1 网络结构中用了crop层，是由于fcn在输入数据上进行了padding，所以在后面的一些层中进行blob数据的裁剪，具体的原理解读见：[Crop层的理解](https://blog.csdn.net/Sunshine_in_Moon/article/details/52900338)。
-* 3.2 [使用Python脚本进行caffe模型文件的生成的模板。](pascalcontext-fcn8s/net.py) 在生成模型文件以后，需要再次将训练模型的训练权重加载到fcn模型中，因此使用surgery.py文件进行修改，包括参数符合层的直接复制与参数不符合的层的前置转换等
+* 3.2 [使用Python脚本进行caffe模型文件的生成的模板。](pascalcontext-fcn8s/net.py) 在生成模型文件以后，需要再次将训练模型的训练权重加载到fcn模型中，因此使用[surgery.py文件](surgery.py)进行修改，包括参数符合层的直接复制与参数不符合的层的前置转换等
 * 3.3 [模型训练文件](pascalcontext-fcn8s/solve.py)主要就是先设置一些solver的参数，然后调用surgery进行模型调整，然后进行训练与验证
 * 3.4 
 

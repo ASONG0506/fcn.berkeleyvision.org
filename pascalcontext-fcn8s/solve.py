@@ -2,6 +2,7 @@
 
 # 进行训练的脚本文件
 # 重要的是把网络的deconv层改成了双线性插值。就是调用的surgery函数的地方
+# 这篇博客写的非常好：https://blog.csdn.net/qq_21368481/article/details/80636932
 import caffe
 import surgery, score
 
