@@ -1,6 +1,7 @@
 #-*- coding:utf-8 -*-
 
 #这个文件是定义关于数据输入层的Pythonlayer实现的，具体的Python layer的内容可以参照这个博客：https://blog.csdn.net/thesby/article/details/51264439
+#就是根据prototxt中给的三个参数对应地通过setup函数赋值到对应的成员变量中，比如有voc_dir是数据集的路径，然后加上
 
 import caffe
 
@@ -60,10 +61,10 @@ class PASCALContextSegDataLayer(caffe.Layer):
         if len(bottom) != 0:
             raise Exception("Do not define a bottom.")
 
-        # load indices for images and labels
+        # load indices for images and labels 根据prorotxt中的参数进行图像录几个的加载获取
         split_f  = '{}/ImageSets/Main/{}.txt'.format(self.voc_dir,
                 self.split)
-        self.indices = open(split_f, 'r').read().splitlines()
+        self.indices = open(split_f, 'r').read().splitlines() #获得路径，然后在reshape函数中加载图像并进行维度转换，在forward函数中进行前向处理。
         self.idx = 0
 
         # make eval deterministic
