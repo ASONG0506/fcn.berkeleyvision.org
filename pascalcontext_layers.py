@@ -1,3 +1,7 @@
+#-*- coding:utf-8 -*-
+
+#这个文件是定义关于数据输入层的Pythonlayer实现的，具体的Python layer的内容可以参照这个博客：https://blog.csdn.net/thesby/article/details/51264439
+
 import caffe
 
 import numpy as np
